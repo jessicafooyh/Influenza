@@ -23,7 +23,7 @@ def influencer_bin_data(influencers, user, pw):
 
 
 def set_creds():
-    """Set instagram credentials here in lists here. Use multiple for efficient scraping."""
+    """Set instagram credentials in lists here. Use multiple for efficient scraping."""
     users = ['instagram_username']
     pws = ['instagram_password']
     return users, pws

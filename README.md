@@ -1,4 +1,4 @@
-# Influenza - Analysing Singapore's network of influencers'
+# Influenza - Analysing Singapore's network of influencers
 
 This is a project to visualise a network between Singapore's instagram influencers. Each node in the network is an influencer, and the edges between them are defined by the pairwise Jaccard similarity of both influencers' followers.
 

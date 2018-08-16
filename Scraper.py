@@ -42,6 +42,7 @@ class Scraper(object):
         self.browser.implicitly_wait(5)
 
     def find_photo_links(self):
+        # edit for future work
         photos = self.browser.find_elements_by_xpath("//div[@class='v1Nh3 kIKUG  _bz0w']")
 
         links = []
@@ -53,14 +54,14 @@ class Scraper(object):
         return links
 
     def open_photo(self, link):
-        # using 25 onwards as quick hack - because link attribute extracted includes https://www.instagram.com in front
+        # hardcoding char 25 onwards as quick hack - excluding 'https://www.instagram.com' at string beginning
         self.browser.implicitly_wait(10)
         self.browser.find_element_by_xpath("//a[@href='" + link[25:] + "']").click()
         self.browser.implicitly_wait(10)
 
         # catch no element exception for videos
         try:
-            # should try and change this if possible too
+            # edit for future work
             likes = self.browser.find_element_by_xpath("//a[@class='zV_Nj kCcVy']")
             photo_follower_n = int(likes.text.replace(' likes', '').replace(',', ''))
             likes.click()
